@@ -23,39 +23,57 @@ $(document).ready(function() {
     $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
     $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
     $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
-  });
-  let total = Theodore.questions.length;
-  $('#answer1').click(function() {
-    count ++;
-    ans1(Theodore, player1);
-    console.log(player1.iq, Theodore.iq);
-    if (total > count){
-      count ++;
-    }
-  });
-  $('#answer2').click(function() {
-    count ++;
-    ans2(Theodore, player1);
-    console.log(player1.iq, Theodore.iq);
-    if (total > count){
-      count ++;
-    }
-  });
-  $('#answer3').click(function() {
-    count ++;
-    ans3(Theodore, player1);
-    console.log(player1.iq, Theodore.iq);
-    if (total > count){
-      count ++;
-    }
-  });
-  $('#answer4').click(function() {
-    count ++;
-    ans4(Theodore, player1);
-    console.log(player1.iq, Theodore.iq);
-    if (total > count){
-      count ++;
-    }
+  
+    let total = Theodore.questions.length-1;
+    $('#answer1').click(function() {
+      console.log(total, count);
+      ans1(Theodore, player1);
+      console.log(player1.iq, Theodore.iq);
+      if (total > count){
+        count ++;
+        $('.question').html(`${Theodore.questions[count].question}`);
+        $('#answer1').html(`${Theodore.questions[count].allAnswers[0]}`);
+        $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
+        $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
+        $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
+      }
+    });
+    $('#answer2').click(function() {
+      ans2(Theodore, player1);
+      console.log(player1.iq, Theodore.iq);
+      if (total > count){
+        count ++;
+      }
+      $('.question').html(`${Theodore.questions[count].question}`);
+      $('#answer1').html(`${Theodore.questions[count].allAnswers[0]}`);
+      $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
+      $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
+      $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
+    });
+    $('#answer3').click(function() {
+      ans3(Theodore, player1);
+      console.log(player1.iq, Theodore.iq);
+      if (total > count){
+        count ++;
+      }
+      $('.question').html(`${Theodore.questions[count].question}`);
+      $('#answer1').html(`${Theodore.questions[count].allAnswers[0]}`);
+      $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
+      $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
+      $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
+    });
+    $('#answer4').click(function() {
+      ans4(Theodore, player1);
+      console.log(player1.iq, Theodore.iq);
+      if (total > count){
+        count ++;
+      }
+      $('.question').html(`${Theodore.questions[count].question}`);
+      $('#answer1').html(`${Theodore.questions[count].allAnswers[0]}`);
+      $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
+      $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
+      $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
+    });
   });
 });
 
