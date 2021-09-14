@@ -10,6 +10,7 @@ import {Enemy} from './enemy.js';
 export let  Theodore = new Enemy("Theodore", 40, 10, "", 13, [""], 10);
 export let Nancy = new Enemy("Nancy", 40, 12, "", 13, [""], 10);
 
+
 export let enemyLibrary = [
   Theodore, Nancy
 ];
