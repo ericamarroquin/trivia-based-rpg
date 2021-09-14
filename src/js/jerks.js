@@ -7,12 +7,15 @@ import {Enemy} from './enemy.js';
 //   ]
 // }
 
-export let  Theodore = new Enemy("Theodore", 40, 10, "", 13, [""], 10);
+export let Theodore = new Enemy("Theodore", 40, 10, "", 13, [""], 10);
 export let Nancy = new Enemy("Nancy", 40, 12, "", 13, [""], 10);
-
+export let Bret = new Enemy("Bret", 12, 17, "", 21, [""], 10);
+export let Thomas = new Enemy("Thomas", 50, 11, "easy", 17, [""], 10);
+export let Brody = new Enemy("Brody", 40, 13, "easy", 12, [""], 10);
+export let Kyle = new Enemy("Kyle", 30, 10, "", 31, [""], 10);
 
 export let enemyLibrary = [
-  Theodore, Nancy
+  Bret, Thomas, Brody, Kyle
 ];
 
 

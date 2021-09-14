@@ -56,3 +56,9 @@ export class GreekLife extends Player {
     //unique ability "phone bro(sette)" that allows player to skip a turn and get one free answer.
   }
 }
+
+{/* <audio loop autoplay>
+    <source src="path/to/file" type="audio/filetype">
+</audio>
+
+<audio src="/music/good_enough.mp3" controls></audio> */}

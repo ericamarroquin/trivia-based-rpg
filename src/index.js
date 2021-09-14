@@ -16,18 +16,15 @@ $(document).ready(function() {
   enemy.getQ();
   console.log(enemy);
 
-  // function createEnemy() {
-  //   enemy.getQ();
-  //   enemy.shuffleQuestions();
-  // }
-
   function checkIq() {
-    if (player1.iq === 0) {
+    if (player1.iq <= 0) {
       console.log("GAME OVER");
       return "GAME OVER";
-    } else if (enemy.iq === 0 && totalEnemies > enemyCount) {
+    } else if (enemy.iq <= 0 && totalEnemies > enemyCount) {
       console.log("YOU WIN!");
       $('#enemy2').show();
+    } else if (enemy.iq <= 0 && totalEnemies === enemyCount){
+      console.log("YOU'RE THE SMARTEST PERSON EVER: IQ = 9000");
     }
   }
 
@@ -55,7 +52,6 @@ $(document).ready(function() {
         changeQuestion();
         console.log(enemy);
       }, 1000);
-      
       $('#enemy2').hide();
     });
 
@@ -105,4 +101,3 @@ $(document).ready(function() {
     });
   });
 });
-
