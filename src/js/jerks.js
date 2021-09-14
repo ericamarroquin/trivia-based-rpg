@@ -1,7 +1,19 @@
 import {Enemy} from './enemy.js';
 
-export let Theodore = new Enemy("theodore", 40, 10, "", 13, [""], 10);
-export let Nancy = new Enemy("nancy", 40, 12, "", 13, [""], 10);
+// export let enemyLibrary = new Enemy(){
+//   enemies = [
+//      enemy = " enemy", 40, 10, "", 13, [""], 10
+//     nancy;
+//   ]
+// }
+
+export let  Theodore = new Enemy("Theodore", 40, 10, "", 13, [""], 10);
+export let Nancy = new Enemy("Nancy", 40, 12, "", 13, [""], 10);
+
+export let enemyLibrary = [
+  Theodore, Nancy
+];
+
 
 //Categories
 // 9, "General Knowledge"
