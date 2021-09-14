@@ -45,8 +45,7 @@ export class Enemy {
       });
   }
 
-  async shuffleQuestions() {
-    await this.getQ();
+  shuffleQuestions() {
     const shuffledArray = this.questions[0].allAnswers.sort(() => 0.5 - Math.random());
     return shuffledArray;
   }

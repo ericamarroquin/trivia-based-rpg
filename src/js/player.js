@@ -1,10 +1,11 @@
-class Player {
+export class Player {
   constructor(name) {
     this.name = name;
     this.iq = 100;
     this.exp = 0;
     this.level = 0;
     this.items = [];
+    this.attack = 10;
   }
 }
 
