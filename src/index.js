@@ -13,31 +13,49 @@ import {ans1, ans2, ans3, ans4} from './js/battle.js';
 // }
 
 $(document).ready(function() {
+  let count = 0;
   let player1 = new Player("guy");
   Theodore.getQ();
   $('#testFight').click(function() {
     Theodore.shuffleQuestions();
-    $('.question').html(`${Theodore.questions[0].question}`);
-    $('#answer1').html(`${Theodore.questions[0].allAnswers[0]}`);
-    $('#answer2').html(`${Theodore.questions[0].allAnswers[1]}`);
-    $('#answer3').html(`${Theodore.questions[0].allAnswers[2]}`);
-    $('#answer4').html(`${Theodore.questions[0].allAnswers[3]}`);
+    $('.question').html(`${Theodore.questions[count].question}`);
+    $('#answer1').html(`${Theodore.questions[count].allAnswers[0]}`);
+    $('#answer2').html(`${Theodore.questions[count].allAnswers[1]}`);
+    $('#answer3').html(`${Theodore.questions[count].allAnswers[2]}`);
+    $('#answer4').html(`${Theodore.questions[count].allAnswers[3]}`);
   });
+  let total = Theodore.questions.length;
   $('#answer1').click(function() {
+    count ++;
     ans1(Theodore, player1);
     console.log(player1.iq, Theodore.iq);
+    if (total > count){
+      count ++;
+    }
   });
   $('#answer2').click(function() {
+    count ++;
     ans2(Theodore, player1);
     console.log(player1.iq, Theodore.iq);
+    if (total > count){
+      count ++;
+    }
   });
   $('#answer3').click(function() {
+    count ++;
     ans3(Theodore, player1);
     console.log(player1.iq, Theodore.iq);
+    if (total > count){
+      count ++;
+    }
   });
   $('#answer4').click(function() {
+    count ++;
     ans4(Theodore, player1);
     console.log(player1.iq, Theodore.iq);
+    if (total > count){
+      count ++;
+    }
   });
 });
 
