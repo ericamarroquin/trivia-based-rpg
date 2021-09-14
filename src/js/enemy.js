@@ -46,7 +46,8 @@ export class Enemy {
   }
 
   shuffleQuestions() {
-    const shuffledArray = this.questions[0].allAnswers.sort(() => 0.5 - Math.random());
-    return shuffledArray;
+    for (let i = 0; i < this.questions.length; i++) {
+      this.questions[i].allAnswers.sort(() => 0.5 - Math.random());
+    }
   }
 }
