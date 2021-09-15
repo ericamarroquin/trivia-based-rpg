@@ -53,11 +53,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: "eslint-loader"
       },
-      {
-        test: /\.mp3$/,
-        include: SRC,
-        loader: 'file-loader'
-      }
     ]
   }
 };
