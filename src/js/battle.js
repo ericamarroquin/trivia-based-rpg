@@ -1,3 +1,5 @@
+import { allItems } from "./items";
+
 export function ans1(enemy, player, count) {
   if(enemy.questions[count].allAnswers[0] === enemy.questions[count].correctAnswer) {
     enemy.iq = (enemy.iq - player.attack);
@@ -39,14 +41,23 @@ export function ans4(enemy, player, count) {
 }
 
 export function useItem(player, item) {
-  if (item === "Honor-Roll Ribbon") {
-    player.iq += 5;
-  } else if (item === "Philosopher's Stone") {
-    player.attack += 2;
+  for (let i = 0; i < allItems.length; i++) {
+    if (item === allItems[i].name) {
+      player[allItems[i].statAffected] += allItems[i].statIncrease;
+    }
   }
 }
 
 export function takeItems(toPlayer, fromPlayer) {
   toPlayer.items.push(fromPlayer.items);
   fromPlayer.items = [];
+}
+
+export function takeExp(toPlayer, fromPlayer) {
+  if (toPlayer.exp >= 10) {
+    toPlayer.level += 1;
+    toPlayer.exp = 0;
+  } else {
+    toPlayer.exp += fromPlayer.exp;
+  }
 }

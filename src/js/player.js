@@ -6,6 +6,7 @@ export class Player {
     this.level = 0;
     this.items = [];
     this.attack = 10;
+    this.level = 1;
   }
 }
 

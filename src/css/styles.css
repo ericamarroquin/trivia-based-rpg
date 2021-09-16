@@ -104,6 +104,7 @@ body {
   background-color: rgba(245, 245, 220, 0.774);
   margin: 13px;
   overflow:scroll;
+  font-size: small;
 }
 #enemyStats {
   display:none;
@@ -113,6 +114,10 @@ body {
   background-color: rgba(245, 245, 220, 0.726);
   margin: 12px;
   overflow: scroll;
+  font-size:small;
+}
+.statsMarker {
+  font-size: 13pt;
 }
 
 #title{
@@ -155,14 +160,17 @@ body {
 }
 
 #enemyName {
+  background-image: url(../../assets/img/scroll.png) !important;
+  width: 100%;
   display: none;
   font-family: 'MedievalSharp', cursive;
   font-size: xx-large;
   background-color: beige;
+  border-radius: 60px 45px 30px 15px/15px 30px 45px 60px;
 }
 .question {
   font-family: 'Open Sans', sans-serif;
-  font-size: large;
+  font-size: 16;
   background-color: rgba(255, 248, 220, 0.596);
   margin: 10px;
   padding: 10px;
@@ -175,7 +183,7 @@ button {
   border: none;
   border-radius: 2px;
   padding: 12px 18px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   color: rgb(116, 54, 26);
   background-color: blanchedalmond;
