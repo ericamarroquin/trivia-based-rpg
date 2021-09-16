@@ -1,3 +1,201 @@
-#enemy2 {
+/* font-family: 'MedievalSharp', cursive;
+font-family: 'Megrim', cursive;
+font-family: 'Open Sans', sans-serif; */
+#hideAnswers {
   display: none;
 }
+#nextBattle {
+  display: none;
+  margin-top: 50px;
+}
+#testFight{
+  display:none;
+}
+#backstory {
+  display: none;
+}
+#gameOver {
+  display: none;
+  box-shadow:0px 0px 200px 100px rgb(36, 26, 12);
+  background-color: rgba(122, 22, 22, 0.795);
+  color: white;
+  text-shadow: blanchedalmond;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MedievalSharp', cursive;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 10px;
+}
+#youWIN {
+  display: none;
+  box-shadow:0px 0px 200px 100px rgba(226, 167, 83, 0.911);
+  background-color: rgba(231, 205, 147, 0.774);
+  color: rgb(51, 30, 30);
+  text-shadow: blanchedalmond;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MedievalSharp';
+  font-size: larger;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 10px;
+}
+
+#playAgain {
+  display: none;
+}
+#backstoryName {
+  font-size: 30pt;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:10px 10px 50px 50px rgba(241, 220, 192, 0.808);
+  background-color: rgba(209, 188, 177, 0.719);
+  font-family: 'MedievalSharp';
+}
+#backstoryStory {
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  background-color: rgba(255, 248, 220, 0.596);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow:10px 10px 10px 10px rgba(222, 184, 135, 0.445);
+}
+.question {
+  display: none;
+}
+body {
+  padding-top: 30px;
+  background-color: black;
+  text-align: center;
+}
+#game {
+  background-image: url(../../assets/img/library.png);
+  background-size: cover;
+  height: 600px;
+  width: 900px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameContent {
+  display: block;
+  background-color: rgba(250, 211, 174, 0.5);
+  box-shadow:10px 10px 50px 50px rgba(222, 184, 135, 0.336);
+  height: 450px;
+  width: 650px;
+  margin: 0 auto;
+  padding: 3%;
+  font-family: 'Open Sans', sans-serif; 
+  text-align: center;
+}
+#playerStats {
+  display:none;
+  width: 270px;
+  height: 150px;
+  float:left;
+  background-color: rgba(245, 245, 220, 0.774);
+  margin: 13px;
+  overflow:scroll;
+}
+#enemyStats {
+  display:none;
+  width: 270px;
+  height: 150px;
+  float:left;
+  background-color: rgba(245, 245, 220, 0.726);
+  margin: 12px;
+  overflow: scroll;
+}
+
+#title{
+  font-family: 'MedievalSharp', cursive;
+  font-size: 30pt;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow:10px 10px 50px 50px rgba(241, 220, 192, 0.808);
+  background-color: rgba(226, 209, 200, 0.719);
+  background-size: cover;
+}
+#title{
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid rgb(61, 58, 45);
+  margin: 0 auto;
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:rgb(61, 58, 45);; }
+}
+#instructionsP {
+  display: none;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  background-color: rgba(255, 248, 220, 0.596);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow:10px 10px 10px 10px rgba(222, 184, 135, 0.445);
+}
+
+#enemyName {
+  display: none;
+  font-family: 'MedievalSharp', cursive;
+  font-size: xx-large;
+  background-color: beige;
+}
+.question {
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  background-color: rgba(255, 248, 220, 0.596);
+  margin: 10px;
+  padding: 10px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow:10px 10px 10px 10px rgba(222, 184, 135, 0.596);
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  color: rgb(116, 54, 26);
+  background-color: blanchedalmond;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: 0.8s;
+}
+
+button:hover {
+  background: rgb(226, 202, 158) radial-gradient(circle, transparent 1%, rgb(216, 187, 167) 1%) center/15000%;
+}
+button:active {
+  background-color: rgb(226, 202, 158);
+  background-size: 100%;
+  transition: 0s;
+}
+#credits {
+  color: rgb(94, 92, 92);
+  font-size: x-small;
+}
+
+

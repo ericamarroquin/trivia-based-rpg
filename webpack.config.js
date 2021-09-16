@@ -1,4 +1,5 @@
 const path = require('path');
+const SRC = path.resolve(__dirname, 'dist')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -47,6 +48,11 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.mp3$/,
+        include: SRC,
+        loader: 'file-loader'
       },
       {
         test: /\.js$/,

@@ -7,7 +7,7 @@ export class Question {
 }
 
 export class Enemy {
-  constructor(name, iq, attack, difficulty, category, items, amount) {
+  constructor(name, iq, attack, difficulty, category, items, amount, backstory) {
     this.name = name;
     this.iq = iq;
     this.attack = attack;
@@ -16,6 +16,7 @@ export class Enemy {
     this.items = items;
     this.amount = amount;
     this.questions = [];
+    this.backstory = backstory;
   }
 
   getQuestions() {
