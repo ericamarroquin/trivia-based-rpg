@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Megrim&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>The Library</title>
+</head>
+<body>
+  <div class="container">
+    <div id="game">
+      <div id="gameContent">
+        <div id="instructions">
+          <div id="title">
+            <h1>Welcome to the Library<h1>
+          </div>
+          <div id="instructionsP">
+            <p>You are trapped in the library... The only way out is to fight! 
+              <br><br>
+            <strong>Use your intellectual skills to lower the IQ of your opponent.</strong>
+              <br><br>
+            Each enemy will ask you a series of trivia questions. Every time you answer correctly, their IQ goes down! <em>But be careful...</em> Every time you answer incorrectly, your IQ goes down. 
+              <br><br>
+            <strong>The battle ends when either fighter's IQ reaches 0.</strong>
+              <br>
+            Good luck! <p>
+          </div>
+          <button id="testFight">Fight!</button>
+        </div>
+        <button id="nextBattle">Fight Next Enemy!</button>
+        <div id="backstory">
+          <div id="backstoryName"></div>
+          <div id="backstoryStory"></div>
+          <button id="fightThem"></button>
+        </div>
+        <div id="enemyName"></div>
+        <div class="question"></div>
+        <div id="gameOver">
+          <h2>GAME OVER</h2>
+        </div>
+        <button onClick="history.go(0);" id="playAgain">Play Again</button>
+        <div id = "hideAnswers">
+          <button type="submit" id="answer1"></button>
+          <button type="submit" id="answer3"></button>
+          <button type="submit" id="answer4"></button>
+          <button type="submit" id="answer2"></button>
+        </div>
+        <div id="playerStats">
+          <div class="statsMarker">Player Stats</div> 
+          <div id="playerIQ"></div>
+          <div id="playerExp"></div>
+          <div id="level"></div>
+          <div id="playerAttack"></div>
+          <div id="playerItems"></div>
+        </div>
+        <div id="enemyStats">
+          <div class="statsMarker">Enemy Stats</div>
+          <div id="enemyIQ"></div>
+          <div id="enemyAttack"></div>
+          <div id="enemyItems"></div>
+        </div>
+        <div id="youWIN">
+          <p>Congratulations Player-1, you have defeated the world's most feared students with nothing but your intellect and wits. The library doors have unlocked and you are free to resume life as normal. Take what you have learned here today and dazzle your friends...maybe after they finish their second drink... and agree to hear a bit of trivia from the smartest person at the party. 
+          </p>
+          <button onClick="history.go(0);" id="play">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <!-- <iframe src="https://open.spotify.com/embed/track/3weouyAN57ciiGncNCuCQE" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+    <audio controls volume="0.5" autoplay id = "initialVol" loop = "loop"> 
+      <source src="https://soundimage.org/wp-content/uploads/2018/10/Our-Mountain_v003_Looping.mp3" />
+    </audio>
+    <script>
+      var audio = document.getElementById("initialVol");
+      audio.volume = 0.1;
+    </script>
+    </div>
+    <div id='credits'>
+      <p>Developer Team: <a href="https://github.com/bendunhampdx">Ben Dunham</a>, <a href="https://github.com/chynnalew">Chynna Lew</a>, <a href="https://github.com/ericamarroquin">Erica Marroquin</a>, <a href="https://github.com/art-weinstein">Art Weinstein</a></p>
+      <p>Music By: <a href="www.soundimage.org">Eric Matyas</a></p>
+      <p>Background Image: Maplestory Custom BG - Garden Cafe by Akarituturu on DeviantArt</p>
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
+
