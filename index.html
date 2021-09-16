@@ -68,13 +68,13 @@
         </div>
       </div>
     </div>
-    <!-- <iframe src="https://open.spotify.com/embed/track/3weouyAN57ciiGncNCuCQE" width="300" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-    <audio controls volume="0.5" autoplay id = "initialVol" loop = "loop"> 
+    <audio controls volume="0.5" id = "initialVol" loop = "loop"> 
       <source src="https://soundimage.org/wp-content/uploads/2018/10/Our-Mountain_v003_Looping.mp3" />
     </audio>
     <script>
       var audio = document.getElementById("initialVol");
       audio.volume = 0.1;
+      audio.play();
     </script>
     </div>
     <div id='credits'>
@@ -83,6 +83,6 @@
       <p>Background Image: Maplestory Custom BG - Garden Cafe by Akarituturu on DeviantArt</p>
     </div>
   </div>
-<script type="text/javascript" src="bundle.js"></script></body>
+<script type="text/javascript" src="/trivia-based-rpg/bundle.js"></script></body>
 </html>
 
